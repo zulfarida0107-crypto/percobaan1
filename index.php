@@ -5,6 +5,7 @@ require_once 'config/database.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
     header('Content-Type: application/json');
     
+    
     // LOGIKA LOGIN AJAX (Harus berjalan meskipun belum ada sesi)
     if ($_POST['action'] == 'login') {
         // Logika Login ditambahkan
