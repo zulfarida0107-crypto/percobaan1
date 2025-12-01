@@ -1,6 +1,6 @@
-
+# SETTING PORT
 services:
-  # Nginx Web Server (Custom Build)
+  # Nginx Web Server (Custom Build) nampilin web pakai port 1234 = harus diubah tiap folder
   nginx:
     build:
       context: .
@@ -33,7 +33,7 @@ services:
     networks:
       - app-network
 
-  # MySQL Database Server
+  # MySQL Database Server = harus diubah tiap folder
   mysql:
     image: mysql:8.0
     environment:
@@ -48,7 +48,7 @@ services:
     networks:
       - app-network
 
-  # phpMyAdmin untuk Database Management
+  # phpMyAdmin untuk Database Management = harus diubah tiap folder
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:

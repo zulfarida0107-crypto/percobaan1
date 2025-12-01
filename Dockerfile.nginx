@@ -1,7 +1,11 @@
 # Custom Nginx Dockerfile
 FROM nginx
 COPY ./default.conf /etc/nginx/conf.d/default.conf
+
 # Expose port 80
 EXPOSE 80
+
 # Command untuk menjalankan nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"] 
+
+# saat menjalankan nginx maka akan menjalankan kontainer (-g) secara otomatis akan running (daemon off)

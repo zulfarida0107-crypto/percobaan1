@@ -1,0 +1,22 @@
+
+name: Hello Word Workflow
+
+on:
+  push:
+    branches: [ master ] # Pastikan nama branch sesuai!
+
+jobs:
+  greeting:
+    runs-on: my-laptop # Ganti dengan label yang dibuat
+
+    steps:
+    -	name: Say Hello
+    run: echo "Hello, World! 👋"
+
+    -	name: Show Date and Time
+    run: echo "Current time is $(date) ⏱"
+
+    - name: Show GitHub Info run: |
+    echo "Repository: ${{ github.repository }}" 
+    echo "Branch: ${{ github.ref }}"
+    echo "Commit: ${{ github.sha }}"
